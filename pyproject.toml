@@ -6,7 +6,7 @@ authors = ["Tobias Hößl <tobias@hoessl.eu>", "Konstantin Schütze <konstin@mai
 license = "MIT"
 
 [tool.poetry.dependencies]
-Django = "~2.1"
+Django = "~2.2"
 django-allauth = "^0.39"
 django-anymail = "^6.0"
 django-braces = "^1.13"
@@ -37,7 +37,7 @@ sentry-sdk = "^0.7.2"
 minio = "^4.0"
 tqdm = "^4.29"
 python-dateutil = "^2.7"
-wagtail = "^2.4"
+wagtail = { git = "https://github.com/wagtail/wagtail", branch = "master" }
 django-decorator-include = "^2.1"
 
 
