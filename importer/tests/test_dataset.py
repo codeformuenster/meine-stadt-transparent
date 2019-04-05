@@ -3,7 +3,7 @@ import logging
 import os
 
 from dateutil.relativedelta import relativedelta
-from django.test import TestCase
+from django.test import TransactionTestCase
 from django.utils import timezone
 
 from importer.importer import Importer
@@ -25,7 +25,7 @@ from mainapp.models import (
 logger = logging.getLogger(__name__)
 
 
-class TestImporter(TestCase):
+class TestImporter(TransactionTestCase):
     dummy_data = "testdata/oparl"
     base_timestamp = timezone.now().astimezone().replace(microsecond=0)
     new_timestamp = None
